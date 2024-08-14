@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lernen</title>
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style1.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+<body>
+  <a href="index.html"><img src="img/logo.png" class="log" alt="img"></a>
+<div class="container">
+    <h2>Sign In</h2>
+    <form id="signInForm">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <div class="error-message" id="usernameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error-message" id="passwordError"></div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Sign In">
+        </div>
+    </form>
+</div>
+<script>
+    const form = document.getElementById('signInForm');
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+    const usernameError = document.getElementById('usernameError');
+    const passwordError = document.getElementById('passwordError');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            // Submit the form if validation passes
+            alert('Form submitted successfully!');
+            // You can add AJAX call or other form submission logic here
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+
+        // Reset errors
+        usernameError.textContent = '';
+        passwordError.textContent = '';
+
+        // Username validation
+        if (username.value.trim() === '') {
+            usernameError.textContent = 'Username is required';
+            isValid = false;
+        }
+
+        // Password validation
+        if (password.value.trim() === '') {
+            passwordError.textContent = 'Password is required';
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>

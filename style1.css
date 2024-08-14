@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.log {
+  height: 17rem;
+  width: 18rem;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-left: 22px;
+  position:relative;
+  text-shadow:0 0 250px aqua,
+              0 0 350px aqua,
+              0 0 450px aqua,
+              0 0 556px aqua;
+  animation:animate 5s linear infinite;
+  background-color: white;
+  border-radius:3px;
+  border-style:inset;
+  border-color:#007bff;
+}
+@keyframes animate{
+  0%{
+    filter:hue-rotate(0deg);
+  }
+  100%{
+    
+    filter:hue-rotate(259deg);
+  }
+}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #081b29;
+    }
+    .container {
+        width: 350px;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 8px;
+        text-shadow: 0 0 250px aqua,
+        0 0 350px aqua,
+        0 0 450px aqua,
+        0 0 556px aqua;
+        box-shadow:5px 5px 100px #007bff;
+        animation:animate 5s linear infinite;
+        border-style:solid;
+        border-color:aqua;
+    }
+    .container h2 {
+        margin: 0 0 20px;
+        text-align: center;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .form-group input:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+    .form-group .error-message {
+        color: red;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+    .form-group input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
